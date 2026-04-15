@@ -1,0 +1,37 @@
+<h1>Consulta de Times</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Sigla</th>
+      <th>Copas</th>
+      <th>Ranking</th>
+      <th>Ativo</th>
+      <th>Data Fundação</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (time of listaTimes; track time.id) {
+      <tr>
+        <td>{{ time.nome }}</td>
+        <td>{{ time.sigla }}</td>
+        <td>{{ time.qtd_copas }}</td>
+        <td>{{ time.ranking_fifa }}</td>
+        <td>{{ time.ativo ? 'Sim' : 'Não' }}</td>
+        <td>{{ time.data_fundacao }}</td>
+
+        <td>
+          <button class="edit" (click)="editar(time.id)">Editar</button>
+          <button class="delete" (click)="remover(time.id)">Remover</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<div class="actions">
+  <button (click)="buscar()">Consultar</button>
+</div>

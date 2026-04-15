@@ -1,0 +1,37 @@
+<h1>Consulta de Jogos</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Mandante</th>
+        <th>Visitante</th>
+        <th>Gols</th>
+        <th>Público</th>
+        <th>Renda</th>
+        <th>Status</th>
+        <th>Data</th>
+        <th>Ações</th>
+    </tr>
+
+    @for (jogo of jogos; track jogo.id) {
+    <tr>
+        <td>{{ jogo.id }}</td>
+        <td>{{ jogo.id_time_mandante }}</td>
+        <td>{{ jogo.id_time_visitante }}</td>
+        <td>{{ jogo.nr_gols_mandante }} x {{ jogo.nr_gols_visitante }}</td>
+        <td>{{ jogo.publico_pagante }}</td>
+        <td>{{ jogo.renda_total }}</td>
+        <td>{{ jogo.realizado ? 'Realizado' : 'Não realizado' }}</td>
+        <td>{{ jogo.data_jogo }}</td>
+
+        <td>
+            <button [routerLink]="['/jogos/novo', jogo.id]">Editar</button>
+            <button (click)="remover(jogo.id)">Remover</button>
+        </td>
+    </tr>
+    }
+</table>
+
+<div class="actions">
+    <button (click)="listar()">Consultar</button>
+</div>

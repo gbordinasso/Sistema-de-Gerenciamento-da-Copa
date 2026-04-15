@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>Cadastro de Jogo</h1>
+
+    <div>
+        <label>ID Time Mandante:</label>
+        <input class="form-group" type="number" [(ngModel)]="jogo.id_time_mandante">
+    </div>
+
+    <div>
+        <label>ID Time Visitante:</label>
+        <input class="form-group" type="number" [(ngModel)]="jogo.id_time_visitante">
+    </div>
+
+    <div>
+        <label>Gols Mandante:</label>
+        <input class="form-group" type="number" [(ngModel)]="jogo.nr_gols_mandante">
+    </div>
+
+    <div>
+        <label>Gols Visitante:</label>
+        <input class="form-group" type="number" [(ngModel)]="jogo.nr_gols_visitante">
+    </div>
+
+    <div>
+        <label>Público Pagante:</label>
+        <input class="form-group" type="number" [(ngModel)]="jogo.publico_pagante">
+    </div>
+
+    <div>
+        <label>Renda Total:</label>
+        <input class="form-group" type="number" [(ngModel)]="jogo.renda_total">
+    </div>
+
+    <div>
+        <label>Realizado:</label>
+        <input class="form-group" type="checkbox" [(ngModel)]="jogo.realizada">
+    </div>
+
+    <div>
+        <label>Data do Jogo:</label>
+        <input class="form-group" type="date" [(ngModel)]="jogo.data_jogo">
+    </div>
+
+    <button (click)="salvar()">Salvar</button>
+</div>

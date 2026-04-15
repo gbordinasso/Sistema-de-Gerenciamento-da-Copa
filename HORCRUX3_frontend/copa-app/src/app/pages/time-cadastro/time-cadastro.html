@@ -1,0 +1,37 @@
+<h1>Cadastro de Time</h1>
+
+<div class="container">
+    <div class="form-group">
+        <label>Nome:</label>
+        <input type="text" [(ngModel)]="time.nome">
+    </div>
+
+    <div class="form-group">
+        <label>Sigla:</label>
+        <input type="text" [(ngModel)]="time.sigla">
+    </div>
+
+    <div class="form-group">
+        <label>Copas:</label>
+        <input type="number" [(ngModel)]="time.qtd_copas">
+    </div>
+
+    <div class="form-group">
+        <label>Ranking FIFA:</label>
+        <input type="number" [(ngModel)]="time.ranking_fifa">
+    </div>
+
+    <div class="form-group checkbox">
+        <label>
+            <input type="checkbox" [(ngModel)]="time.ativo">
+            Ativo
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>Data Fundação:</label>
+        <input type="date" [(ngModel)]="time.data_fundacao">
+    </div>
+
+    <button (click)="salvar()">Salvar</button>
+</div>
