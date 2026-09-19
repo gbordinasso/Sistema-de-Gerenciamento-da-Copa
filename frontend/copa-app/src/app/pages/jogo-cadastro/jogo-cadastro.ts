@@ -42,7 +42,6 @@ export class JogoCadastro implements OnInit {
     this.http.get<any>(`http://localhost:3000/jogo/${this.id}`)
       .subscribe(res => {
 
-        // 🔥 Ajuste da data para input type="date"
         if (res.data_jogo) {
           res.data_jogo = new Date(res.data_jogo).toISOString().substring(0, 10);
         }

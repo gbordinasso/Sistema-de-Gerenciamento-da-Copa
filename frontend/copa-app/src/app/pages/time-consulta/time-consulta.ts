@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-time-consulta',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './time-consulta.html',
   styleUrl: './time-consulta.css',
 })

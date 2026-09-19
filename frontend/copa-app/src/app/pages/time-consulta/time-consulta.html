@@ -1,37 +1,83 @@
-<h1>Consulta de Times</h1>
+<div class="page">
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Sigla</th>
-      <th>Copas</th>
-      <th>Ranking</th>
-      <th>Ativo</th>
-      <th>Data Fundação</th>
-      <th>Ações</th>
-    </tr>
-  </thead>
+  <div class="content">
 
-  <tbody>
-    @for (time of listaTimes; track time.id) {
-      <tr>
-        <td>{{ time.nome }}</td>
-        <td>{{ time.sigla }}</td>
-        <td>{{ time.qtd_copas }}</td>
-        <td>{{ time.ranking_fifa }}</td>
-        <td>{{ time.ativo ? 'Sim' : 'Não' }}</td>
-        <td>{{ time.data_fundacao }}</td>
+    <div class="header">
 
-        <td>
-          <button class="edit" (click)="editar(time.id)">Editar</button>
-          <button class="delete" (click)="remover(time.id)">Remover</button>
-        </td>
-      </tr>
-    }
-  </tbody>
-</table>
+      <div>
+        <span class="eyebrow">GERENCIAMENTO DE TIMES</span>
 
-<div class="actions">
-  <button (click)="buscar()">Consultar</button>
+        <h1>Consulta de Times</h1>
+
+        <p>
+          Visualize e gerencie os times cadastrados na competição.
+        </p>
+      </div>
+
+      <button class="consult-button" type="button" (click)="buscar()">
+        Consultar
+      </button>
+
+    </div>
+
+    <div class="table-card">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Sigla</th>
+            <th>Copas</th>
+            <th>Ranking</th>
+            <th>Ativo</th>
+            <th>Data Fundação</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          @for (time of listaTimes; track time.id) {
+
+          <tr>
+
+            <td>{{ time.nome }}</td>
+
+            <td>{{ time.sigla }}</td>
+
+            <td>{{ time.qtd_copas }}</td>
+
+            <td>{{ time.ranking_fifa }}</td>
+
+            <td>
+              {{ time.ativo ? 'Sim' : 'Não' }}
+            </td>
+
+            <td>{{ time.data_fundacao | date:'dd/MM/yyyy' }}</td>
+
+            <td class="actions">
+
+              <button class="edit" type="button" (click)="editar(time.id)">
+                Editar
+              </button>
+
+              <button class="delete" type="button" (click)="remover(time.id)">
+                Remover
+              </button>
+
+            </td>
+
+          </tr>
+
+          }
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
 </div>

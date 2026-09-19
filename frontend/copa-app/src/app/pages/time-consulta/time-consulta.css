@@ -1,96 +1,189 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
+    display: block;
     min-height: 100vh;
+}
+
+
+.page {
+    min-height: 100vh;
+    padding: 60px 20px;
+
     background: linear-gradient(135deg, #eef2ff, #f8fafc);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #1f2937;
+.content {
+    width: min(1100px, 100%);
+    margin: 0 auto;
 }
 
-/* TABELA MODERNA */
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.header h1 {
+    margin: 0 0 10px;
+
+    color: #111827;
+    font-size: 30px;
+}
+
+.header p {
+    margin: 0;
+
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+.consult-button {
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.consult-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+.table-card {
+    overflow-x: auto;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+
 table {
     width: 100%;
-    max-width: 1100px;
     border-collapse: collapse;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    min-width: 850px;
 }
 
 th {
+    padding: 15px 16px;
+
     background: #2563eb;
-    color: white;
-    padding: 12px;
+    color: #ffffff;
+
     text-align: left;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 td {
-    padding: 12px;
+    padding: 15px 16px;
+
     border-bottom: 1px solid #e5e7eb;
+
     color: #374151;
-}
-
-tr:hover {
-    background: #f3f4f6;
-}
-
-/* BOTÕES DE AÇÃO */
-button {
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
-    margin-right: 6px;
-    transition: 0.2s;
-}
-
-button.edit {
-    background: #10b981;
-    color: white;
-}
-
-button.edit:hover {
-    background: #059669;
-    transform: translateY(-2px);
-}
-
-button.delete {
-    background: #ef4444;
-    color: white;
-}
-
-button.delete:hover {
-    background: #dc2626;
-    transform: translateY(-2px);
-}
-
-/* BOTÃO CONSULTAR */
-.actions {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.actions button {
-    background: #ef4444;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 10px;
     font-size: 14px;
 }
 
-.actions button:hover {
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+.actions {
+    white-space: nowrap;
+}
+
+.actions button {
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.edit {
+    margin-right: 6px;
+
+    background: #10b981;
+    color: #ffffff;
+}
+
+.edit:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+.delete {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.delete:hover {
     background: #dc2626;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 40px 16px;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .consult-button {
+        width: 100%;
+    }
+
 }

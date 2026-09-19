@@ -1,11 +1,99 @@
-<div class="container">
-    <h1>Sistema Copa</h1>
+<div class="home">
 
-    <h3>Times</h3>
-    <button routerLink="/times/novo">Cadastrar Time</button>
-    <button routerLink="/times">Consultar Times</button>
+    <header class="navbar">
 
-    <h3>Jogos</h3>
-    <button routerLink="/jogos/novo">Cadastrar Jogo</button>
-    <button routerLink="/jogos">Consultar Jogos</button>
+        <a class="brand" routerLink="/">
+            Sistema Copa
+        </a>
+
+        <nav class="navigation">
+            <a routerLink="/times">Times</a>
+            <a routerLink="/jogos">Jogos</a>
+        </nav>
+
+    </header>
+
+    <main class="content">
+
+        <section class="hero">
+
+            <span class="eyebrow">
+                GERENCIAMENTO DA COMPETIÇÃO
+            </span>
+
+            <h1>
+                Sistema Copa
+            </h1>
+
+            <p>
+                Gerencie times e jogos da competição
+                de forma simples e organizada.
+            </p>
+
+        </section>
+
+        <section class="cards">
+
+            <article class="card">
+
+                <div class="card-header">
+                    <span class="card-number">01</span>
+
+                    <h2>Times</h2>
+                </div>
+
+                <p>
+                    Cadastre, consulte e gerencie
+                    os times participantes da competição.
+                </p>
+
+                <div class="card-actions">
+                    <button
+                        class="primary"
+                        routerLink="/times">
+                        Consultar Times
+                    </button>
+
+                    <button
+                        class="secondary"
+                        routerLink="/times/novo">
+                        Cadastrar Time
+                    </button>
+                </div>
+
+            </article>
+
+            <article class="card">
+
+                <div class="card-header">
+                    <span class="card-number">02</span>
+
+                    <h2>Jogos</h2>
+                </div>
+
+                <p>
+                    Cadastre, consulte e acompanhe
+                    os jogos e resultados da competição.
+                </p>
+
+                <div class="card-actions">
+                    <button
+                        class="primary"
+                        routerLink="/jogos">
+                        Consultar Jogos
+                    </button>
+
+                    <button
+                        class="secondary"
+                        routerLink="/jogos/novo">
+                        Cadastrar Jogo
+                    </button>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
 </div>

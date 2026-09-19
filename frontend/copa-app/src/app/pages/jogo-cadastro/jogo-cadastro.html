@@ -1,45 +1,93 @@
-<div class="container">
-    <h1>Cadastro de Jogo</h1>
+<div class="page">
 
-    <div>
-        <label>ID Time Mandante:</label>
-        <input class="form-group" type="number" [(ngModel)]="jogo.id_time_mandante">
+    <div class="form-card">
+
+        <div class="header">
+
+            <span class="eyebrow">GERENCIAMENTO DE JOGOS</span>
+
+            <h1>Cadastro de Jogo</h1>
+
+            <p>
+                Adicione os dados de uma partida à competição.
+            </p>
+
+        </div>
+
+        <div class="form">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="mandante">ID Time Mandante</label>
+
+                    <input id="mandante" type="number" [(ngModel)]="jogo.id_time_mandante" placeholder="Ex.: 1">
+                </div>
+
+                <div class="form-group">
+                    <label for="visitante">ID Time Visitante</label>
+
+                    <input id="visitante" type="number" [(ngModel)]="jogo.id_time_visitante" placeholder="Ex.: 2">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="gols-mandante">Gols Mandante</label>
+
+                    <input id="gols-mandante" type="number" [(ngModel)]="jogo.nr_gols_mandante" placeholder="Ex.: 2">
+                </div>
+
+                <div class="form-group">
+                    <label for="gols-visitante">Gols Visitante</label>
+
+                    <input id="gols-visitante" type="number" [(ngModel)]="jogo.nr_gols_visitante" placeholder="Ex.: 1">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="publico">Público Pagante</label>
+
+                    <input id="publico" type="number" [(ngModel)]="jogo.publico_pagante" placeholder="Ex.: 50000">
+                </div>
+
+                <div class="form-group">
+                    <label for="renda">Renda Total</label>
+
+                    <input id="renda" type="number" [(ngModel)]="jogo.renda_total" placeholder="Ex.: 2500000">
+                </div>
+
+            </div>
+
+            <div class="form-group checkbox">
+
+                <label>
+                    <input type="checkbox" [(ngModel)]="jogo.realizada">
+
+                    <span>Jogo realizado</span>
+                </label>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="data">Data do Jogo</label>
+
+                <input id="data" type="date" [(ngModel)]="jogo.data_jogo">
+
+            </div>
+
+            <button type="button" (click)="salvar()">
+                Salvar Jogo
+            </button>
+
+        </div>
+
     </div>
 
-    <div>
-        <label>ID Time Visitante:</label>
-        <input class="form-group" type="number" [(ngModel)]="jogo.id_time_visitante">
-    </div>
-
-    <div>
-        <label>Gols Mandante:</label>
-        <input class="form-group" type="number" [(ngModel)]="jogo.nr_gols_mandante">
-    </div>
-
-    <div>
-        <label>Gols Visitante:</label>
-        <input class="form-group" type="number" [(ngModel)]="jogo.nr_gols_visitante">
-    </div>
-
-    <div>
-        <label>Público Pagante:</label>
-        <input class="form-group" type="number" [(ngModel)]="jogo.publico_pagante">
-    </div>
-
-    <div>
-        <label>Renda Total:</label>
-        <input class="form-group" type="number" [(ngModel)]="jogo.renda_total">
-    </div>
-
-    <div>
-        <label>Realizado:</label>
-        <input class="form-group" type="checkbox" [(ngModel)]="jogo.realizada">
-    </div>
-
-    <div>
-        <label>Data do Jogo:</label>
-        <input class="form-group" type="date" [(ngModel)]="jogo.data_jogo">
-    </div>
-
-    <button (click)="salvar()">Salvar</button>
 </div>

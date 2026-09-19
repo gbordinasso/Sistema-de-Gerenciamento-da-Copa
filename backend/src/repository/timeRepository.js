@@ -64,7 +64,8 @@ export async function alterarTime(id, time) {
         sigla = ?,
         qtd_copas = ?,
         ranking_fifa = ?,
-        ativo = ?
+        ativo = ?,
+        data_fundacao = ?
     WHERE id = ?
     `
 
@@ -74,6 +75,7 @@ export async function alterarTime(id, time) {
         time.qtd_copas,
         time.ranking_fifa,
         time.ativo,
+        time.data_fundacao,
         id
     ])
 

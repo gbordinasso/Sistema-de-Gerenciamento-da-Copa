@@ -55,7 +55,8 @@ export async function alterarJogo(id, jogo) {
         nr_gols_visitante = ?,
         publico_pagante = ?,
         renda_total = ?,
-        realizado = ?
+        realizado = ?,
+        data_jogo = ?
     WHERE id = ?
     `
 
@@ -67,6 +68,7 @@ export async function alterarJogo(id, jogo) {
         jogo.publico_pagante,
         jogo.renda_total,
         jogo.realizado,
+        jogo.data_jogo,
         id
     ])
 
