@@ -24,7 +24,7 @@ export class JogoCadastro implements OnInit {
     nr_gols_visitante: 0,
     publico_pagante: 0,
     renda_total: 0,
-    realizada: true,
+    realizado: true,
     data_jogo: ''
   };
 
